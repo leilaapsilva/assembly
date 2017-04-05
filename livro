@@ -646,10 +646,145 @@ casos, você pode parar um processo selecionando seu nome e pressonando a tecla
 
 Delete. 
 
+2.1.5 Seção de Revisão
 
+1. A Unidade Central de Processamento (CPU) contem registradores e quais outros 
 
+elementos básicos?
+2. A CPU é conectada ao resto do sistema do computador usando quais três 
 
+barramentos?
+3. Por que acesso à memória leva mais ciclos de máquina do que acesso a 
 
+registradores?
+4. Quais são as três etapas básicas no ciclo de execução de instrução?
+5. Quais são as duas etapas adicionais requiridas no ciclo de execução de 
 
+instrução quando um operando da memória é utilizado?
 
+2.2 Processadores x86 de 32 Bits
 
+Nesta seção, nós focamos nas características básicas da arquitetura de todos os 
+
+precessadores x86. Isso inclui membros da família Intel IA-32 e todos os 
+
+processadores AMD de 32 bits.
+
+2.2.1 Modos de operação
+
+Processadores x86 possuem trêsm modos primários de operação: modo protegido, 
+
+modo de endereçamento real (?) e modo de administração do sistema. Um sub-modo, 
+
+chamado virtual-8086, é um caso especial do modo protegido. Aqui está uma curta 
+
+descrição de cada um:
+
+Modo protegido - Modo protegido é o estado nativo do processador, no qual todas 
+
+as instruções e recursos estão disponíveis. Progamas possuem áreas separadas de 
+
+memória chamada segmentos, e o processador previne programas de referenciar 
+
+memória sem seus segmentos associados.
+
+Modo Virtual-8086 - Enquanto está em modo protegido, o processador pode 
+
+diretamente executar o software do modo de endereçamento real como programas do 
+
+MS-DOS em um ambiente seguro. Em outras palavras, se um programa quebra ou 
+
+(attemps) a escrever dados na área de memória do sistema, isso não afetará 
+
+outros programas rodando ao mesmo tempo. Um sistema operacional moderno pode 
+
+executar seções múltiplas de virtual-9086 separadas ao mesmo tempo.
+
+Modo de endereçamento real - Modo de endereçamento real implementa o ambiente 
+
+de programação de um processador intel com alguns recursos extras, como a 
+
+abilidade de alternar entre outros modos. Este modo é utilizado se um programa 
+
+requer acesso direto à memória do sistema e dispositivos de hardware.
+
+Modo de gerenciamento de sistema - O modo de gerenciamento de sistema (em 
+
+inglês, SMM) provê um sistema operacional com um mecanismo para funções 
+
+implementadas com poder de gerenciamento e segurança do sistema. Estas funções 
+
+são usualmente implementadas pelos fabricantes de computadores que customizam o 
+
+processador para um sistema particular.
+
+2.2.2 Ambiente básico de execução
+
+Espaço de endereço
+
+No modo protegido de 32 bits, uma tarefa ou programa pode endereçar um endereço 
+
+linear com espaço de 4GBytes. Começando com o processador P6, uma técnica 
+
+chamada extensão de endereçamento físico aceita um total de 64 GBytes de 
+
+memória física para ser endereçado. Programas do modo de endereçamento real, 
+
+por outro lado, podem apenas endereçar um intervalo de 1 MByte. Se o 
+
+processador está no modo protegido e rodando múltiplos programas no modo 
+
+virtual-8086, cada programa tem sua própria área de memória de 1-MByte.
+
+Figura 2-3 Registradores básicos de execução de programas
+
+Registradores básicos de execução de programas
+
+Registradores são locais de armazenamento de alta-velocidade diretamente 
+
+inseridos na CPU, projetados para serem acessados a uma velocidade muito mais 
+
+alta do que a memória convencional. Quando um processo em loop é otimizado para 
+
+velocidade, por exemplo, contadores de loop são armazenados em registradores 
+
+(rather than) variáveis. A figura 2-3 mostra os registradores básicos de 
+
+execução de programa. Existem oito registradores de propósito geral, seis 
+
+registradores de segmento, um registrador de (status flags) do processador 
+
+(EFLAGS), e um ponteiro de instrução (EIP).
+
+Registradores de Propósito Geral - Os registradores de propósito geral são 
+
+primeiramente usados para aritmética e movimentação de dados. Como mostrado na 
+
+figura 2-4, os 16 bits menos significantes do registrador EAX podem ser 
+
+referenciados usando o nome AX.
+
+Porções de alguns registradores podem ser endereçados como valores de 8 bits. 
+
+Por exemplo, o registrador AX tem um (upper half named) AH e um outro nome 
+
+chamado AL. A mesma relação de (overlapping) existe para os registradores EAX, 
+
+EBX, ECX e EDX.
+
+[tabela]
+
+Os registradores de propósito geral restantes podem ser acessados apenas usando 
+
+nomes de 32 ou 16 bits, como mostra a seguinte tabela:
+
+[Tabela]
+
+Usos especializados - Alguns registradores de propósito geral tem usos 
+
+específicos:
+
+- EAX é automaticamente usado por instruções de multiplicação e divisão. Ele é 
+
+chamado de registrador (extended accumulator).
+- A CPU usa automaticamente o ECX como um contador de loop.
