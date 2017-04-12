@@ -11,7 +11,7 @@
  ExitProcess PROTO, dwExitCode:WORD
  
  .code 
- ; a partir daqui descrever o codigo em assembly
+ ; à partir daqui descrever o codigo em assembly
  
  main PROC
  
