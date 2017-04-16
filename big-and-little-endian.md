@@ -1,6 +1,6 @@
 # Big and Little Endian
 
-Traduzido e adaptado do site [original] (https://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Data/endian.html)
+Traduzido e adaptado do site [original](https://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Data/endian.html).
 
 ### Conceitos básicos de memória
 
