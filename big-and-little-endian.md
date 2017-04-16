@@ -8,9 +8,9 @@ Para entender o conceito de big endian e little endian, você precisa entender a
 
 Tudo que você precisa saber sobre memória é que é um grande vetor. Mas um grande vetor contendo o quê? O vetor contém bytes. Em organização de computadores, as pessoas não usam o termo "índice" para se referir às posições do vetor. Em vez disso, nós usamos o termo "endereço". "Endereço" e "índice" significam a mesma coisa, então se você está ficando confuso, apenas pense em "endereço" como "índice". 
 
-Cada endereço armazena um elemento do "vetor" de memória. Cada elemento é tipicamente um byte. Há algumas configurações de memória onde cada endereço armazena algo diferente de um byte. Por exemplo, você poderia armazenar um nybble(?) ou um bit. Entretanto, eles são extremamente raros, então por enquanto nós iremos assumir que todos os endereços de memória armazenam bytes. 
+Cada endereço armazena um elemento do "vetor" de memória. Cada elemento é tipicamente um byte. Há algumas configurações de memória onde cada endereço armazena algo diferente de um byte. Por exemplo, você poderia armazenar um [_nybble_](https://pt.wikipedia.org/wiki/Nibble) ou um bit. Entretanto, eles são extremamente raros, então por enquanto nós iremos assumir que todos os endereços de memória armazenam bytes. 
 
-Eu direi algumas vezes que memória é byte-addressable (endereçável por bytes). Este é apenas um jeito sofisticado de dizer que cada endereço armazena um byte. Se eu disser que memória é nybble-addressable, isso significa que cada endereço de memória armazena um nybble. 
+Eu direi algumas vezes que memória é _byte-addressable_ (endereçável por bytes). Este é apenas um jeito sofisticado de dizer que cada endereço armazena um byte. Se eu disser que memória é _nybble-addressable_, isso significa que cada endereço de memória armazena um _nybble_. 
 
 ### Armazenando palavras na memória
 
