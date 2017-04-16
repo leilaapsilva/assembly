@@ -38,25 +38,25 @@ Operação: $t = $s + imm; advance_pc(4);
 Sintaxe: addiu $t, $s, imm
 Codificação: 0010 01ss ssst tttt iiii iiii iiii iiii
 	
-ADDU - Add unsigned 
+### ADDU - Add unsigned 
 Descrição - Soma dois registradores e armazena o resultado em um registrador
 Operação: $d = $s + $t; advance_pc (4); 
 Sintaxe: addu $d, $s, $t 
 Codificação: 0000 00ss ssst tttt dddd d000 0010 0001
 
-AND - Bitwise and
+#### AND - Bitwise and
 Descrição: Realiza and bit a bit entre dois registradores e armazena o resultado em um registrador
 Operação: $d = $s & $t; advance_pc (4); 
 Sintaxe: and $d, $s, $t 
 Decodificação: 0000 00ss ssst tttt dddd d000 0010 0100
 
-ANDI - Bitwise and immediate
+##### ANDI - Bitwise and immediate
 Descrição: Realiza and bit a bit entre um registrador e um valor imediato e armazena o resultado em um registrador
 Operação: $t = $s & imm; advance_pc (4); 
 Sintaxe: andi $t, $s, imm 
 Decodificação: 0011 00ss ssst tttt iiii iiii iiii iiii	
 
-BEQ - Branch on equal 
+###### BEQ - Branch on equal 
 Descrição: Efetua o desvio se os dois registradores forem iguais
 Operação:  if $s == $t advance_pc (offset << 2)); else advance_pc (4); 		Sintaxe: beq $s, $t, offset 
 Decodificação: 0001 00ss ssst tttt iiii iiii iiii iiii
