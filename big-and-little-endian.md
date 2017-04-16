@@ -24,7 +24,7 @@ Acontece que existem duas formas de armazenar isso na memória.
 
 #### Big Endian
 
-Em big endian, você armazena o byte mais significativo no menor endereço. Veja como seria:
+Em big endian, você armazena o byte *mais* significativo no menor endereço. Veja como seria:
 
 Endereço | Valor 
 -------- |--------
@@ -33,7 +33,20 @@ Endereço | Valor
 1002     | 12
 1003	   | CD  
 
+#### Little Endian 
 
+Em little endian, você armazena o byte *menos* significativo no menor endereço. Veja como seria: 
+
+Endereço | Valor 
+---------|-------
+1000	 | CD
+1001	 | 12 
+1002     | AB
+1003	 | 90  
+
+Note que isso está na ordem inversa comparando com big endian. Para lembrar qual é qual, lembro se o byte menos significativo é armazenado primeiro (portanto, little endian) ou se o bit mais significativo é armazenado primeiro (portanto, big endian). 
+
+Note que eu usei "byte" em vez de "bit" no bit menos significativo. Às vezes abrevio como _LSB_ e _MSB_, com o "B" maiúsculo para se referir a byte e usar o "b" minúsculo para representar bit. 
 
 
 
