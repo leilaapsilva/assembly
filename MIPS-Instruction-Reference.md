@@ -32,7 +32,7 @@ Operação: $t = $s + imm; advance_pc(4);
 Sintaxe: addi $t, $s, imm
 Codificação: 0010 00ss ssst tttt iiii iiii iiii iiii
 
-**ADDIU - Add immediate Unsigned**
+##ADDIU - Add immediate Unsigned
 Descrição: Soma um registrador e um valor imediato sem sinal e armazena o resultado em um registrador.
 Operação: $t = $s + imm; advance_pc(4);
 Sintaxe: addiu $t, $s, imm
@@ -43,4 +43,27 @@ Descrição - Soma dois registradores e armazena o resultado em um registrador
 Operação: $d = $s + $t; advance_pc (4); 
 Sintaxe: addu $d, $s, $t 
 Codificação: 0000 00ss ssst tttt dddd d000 0010 0001
+
+AND - Bitwise and
+Descrição: Realiza and bit a bit entre dois registradores e armazena o resultado em um registrador
+Operação: $d = $s & $t; advance_pc (4); 
+Sintaxe: and $d, $s, $t 
+Decodificação: 0000 00ss ssst tttt dddd d000 0010 0100
+
+ANDI - Bitwise and immediate
+Descrição: Realiza and bit a bit entre um registrador e um valor imediato e armazena o resultado em um registrador
+Operação: $t = $s & imm; advance_pc (4); 
+Sintaxe: andi $t, $s, imm 
+Decodificação: 0011 00ss ssst tttt iiii iiii iiii iiii	
+
+BEQ - Branch on equal 
+Descrição: Efetua o desvio se os dois registradores forem iguais
+Operação:  if $s == $t advance_pc (offset << 2)); else advance_pc (4); 		Sintaxe: beq $s, $t, offset 
+Decodificação: 0001 00ss ssst tttt iiii iiii iiii iiii
+
+BGEZ - Branch on greater than on equal to zero 
+Descrição: Efetua o desvio se o registrador é maior que ou igual a zero 
+Operação: if $s >= 0 advance_pc (offset << 2)); else advance_pc (4); 		Sintaxe: bgez $s, offset 
+Decodificação: 0000 01ss sss0 0001 iiii iiii iiii iiii
+
 	
