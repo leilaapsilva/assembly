@@ -6,18 +6,18 @@
 
 	A maneira pela qual o processador executa uma instrução e avança seus contadores é a seguinte:
 
-	1. Execute a instrução no PC
-	2. Copie nPC para PC
-	3. Adicione 4 ou o offset de deslocamento para nPC
+1. Execute a instrução no PC
+2. Copie nPC para PC
+3. Adicione 4 ou o offset de deslocamento para nPC
 
-	Este comportamento é indicado nas especificações de instrução abaixo. Para abreviar, a função advance_pc(int) é usada em muitas das descrições de instruções. Esta função é definida da seguinte forma:
+Este comportamento é indicado nas especificações de instrução abaixo. Para abreviar, a função advance_pc(int) é usada em muitas das descrições de instruções. Esta função é definida da seguinte forma:
 
 	void advance_pc (SWORD offset) {   
 		PC  =  nPC;  
 		nPC  += offset;
 	}
 
-	Obs: TODOS os valores imediatos devem ser de sinal estendido. Depois disso, você os trata como números com ou sem sinal de 32 bits. Para as instruções não imediatas, a única diferença entre instruções com ou sem sinal é que as instruções com sinal podem gerar um overflow (o que não nos preocupa nesse laboratório.
+Obs: TODOS os valores imediatos devem ser de sinal estendido. Depois disso, você os trata como números com ou sem sinal de 32 bits. Para as instruções não imediatas, a única diferença entre instruções com ou sem sinal é que as instruções com sinal podem gerar um overflow (o que não nos preocupa nesse laboratório.
 
 	As descrições de instruções são dadas abaixo:
 
