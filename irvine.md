@@ -1,24 +1,12 @@
-1.1 Boas vindas a Linguagem Assembly
+## 1.1 Boas vindas a Linguagem Assembly
 
-Este livro, intitulado Linguagem Assembly para Computadores "Intel-Based", foca 
-
-na programação de microprocessadores Intel, especificamente em membros da 
-
-família de processadores Intel IA-32. A família IA-32começou com o Intel 80386, 
-
-e continua(?) atuamente no Pentium 4. A linguagem assembly é a linguagem de 
-
-programação mais antiga, e de todas as linguagens, é a mais próxima da 
-
-linguagem nativa de um computador. Isso proporciona acesso direto ao hardware 
-
+Este livro, intitulado Linguagem Assembly para Computadores "Intel-Based", foca na programação de microprocessadores Intel, especificamente em membros da 
+família de processadores Intel IA-32. A família IA-32começou com o Intel 80386, e continua(?) atuamente no Pentium 4. A linguagem assembly é a linguagem de 
+programação mais antiga, e de todas as linguagens, é a mais próxima da linguagem nativa de um computador. Isso proporciona acesso direto ao hardware 
 de um computador, tornando necessário que você entenda bastante sobre sua 
-
 arquitetura de computadores e sistema operacional.
 
-Valor educacional - Porque você tem que ler este livro? Talvez(?) você esteja 
-
-em um curso similar a um dos seguintes:
+*Valor educacional - Porque você tem que ler este livro?* Talvez você esteja em um curso similar a um dos seguintes:
 
 - Linguagem assembly para microcomputadores 
 - Linguagem de programação assembly
@@ -27,11 +15,8 @@ em um curso similar a um dos seguintes:
 - Programação de sistemas embarcados
 
 De fato, esses são nomes de cursos em colégios e universidades que usam a 
-
 décima terceira edição deste livro. Você provavelmente escontrará que este 
-
 livro contém mais técnicas de linguagem assembly, referencia de informação e 
-
 exemplos do que você pode digerir em um único semestre.
 	Se você está em um curso cujo nome inclui as palavras arquitetura ou 
 
