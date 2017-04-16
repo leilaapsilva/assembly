@@ -66,4 +66,6 @@ Descrição: Efetua o desvio se o registrador é maior que ou igual a zero
 Operação: if $s >= 0 advance_pc (offset << 2)); else advance_pc (4); 		Sintaxe: bgez $s, offset 
 Decodificação: 0000 01ss sss0 0001 iiii iiii iiii iiii
 
+	continua... 
 	
+	original: https://app.box.com/s/lcxnc8upk5argkcjabux4nk7wuhskljc/1/23066158737/155419759424/1
