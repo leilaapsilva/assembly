@@ -32,7 +32,7 @@ Operação: $t = $s + imm; advance_pc(4);
 Sintaxe: addi $t, $s, imm
 Codificação: 0010 00ss ssst tttt iiii iiii iiii iiii
 
-##ADDIU - Add immediate Unsigned
+## ADDIU - Add immediate Unsigned
 Descrição: Soma um registrador e um valor imediato sem sinal e armazena o resultado em um registrador.
 Operação: $t = $s + imm; advance_pc(4);
 Sintaxe: addiu $t, $s, imm
