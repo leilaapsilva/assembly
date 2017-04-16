@@ -23,8 +23,8 @@ Obs: TODOS os valores imediatos devem ser de sinal estendido. Depois disso, voc�
 
 As descrições de instruções são dadas abaixo:
 
-**ADD - Add**|
-------------------------------------------------------------------------------------------------------
+**ADD - Add** |
+------------|------------------------------------------------------------------------------------------
 Descrição:  | Soma dois registradores e armazena o resultado em um registrador
 Operação:   |$d = $s + $t; advance_pc(4);
 Sintaxe:    |add $d, $s, $t
