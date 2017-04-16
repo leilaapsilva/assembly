@@ -1,9 +1,8 @@
 # Big and Little Endian
 
-De: https://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Data/endian.html
-(traduzido e adaptado)
+Traduzido e adaptado do site [original] (https://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Data/endian.html)
 
-Conceitos básicos de memória
+### Conceitos básicos de memória
 
 Para entender o conceito de big endian e little endian, você precisa entender a memória. Por sorte, nós precisamos apenas de uma abstração de alto nível da memória. Você não precisa saber todos os pequenos detalhes de como a memória funciona. 
 
