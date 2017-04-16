@@ -24,10 +24,10 @@ Obs: TODOS os valores imediatos devem ser de sinal estendido. Depois disso, voc�
 As descrições de instruções são dadas abaixo:
 
 **ADD - Add**
-Descrição: Soma dois registradores e armazena o resultado em um registrador
-Operação: $d = $s + $t; advance_pc(4);
-Sintaxe: add $d, $s, $t
-Codificação: 0000 00ss ssst tttt dddd d000 0010 0000
+Descrição:  | Soma dois registradores e armazena o resultado em um registrador
+Operação:   |$d = $s + $t; advance_pc(4);
+Sintaxe:    |add $d, $s, $t
+Codificação:| 0000 00ss ssst tttt dddd d000 0010 0000
 
 **ADDI - Add immediate**
 Descrição: Soma um registrador e um valor imediato com sinal e armazena o resultado em um registrador.
