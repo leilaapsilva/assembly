@@ -1,4 +1,4 @@
-Big and Little Endian
+# Big and Little Endian
 
 De: https://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Data/endian.html
 (traduzido e adaptado)
@@ -13,7 +13,7 @@ Cada endereço armazena um elemento do "vetor" de memória. Cada elemento é tip
 
 Eu direi algumas vezes que memória é byte-addressable (endereçável por bytes). Este é apenas um jeito sofisticado de dizer que cada endereço armazena um byte. Se eu disser que memória é nybble-addressable, isso significa que cada endereço de memória armazena um nybble. 
 
-Armazenando palavras na memória
+### Armazenando palavras na memória
 
 Nós definimos uma palavra como 32 bits. Isso é o mesmo que 4 bytes. Inteiros, números de ponto flutuante de precisão simples, e instruções MIPS são todos de 32 bits de comprimento. Como nós podemos armazenar estes valores na memória? Afinal, cada endereço de memória pode armazenar um único byte, não 4 bytes. 
 
@@ -23,16 +23,16 @@ Então, os 4 bytes são: 90, AB, 12, CD onde cada byte requer dois dígitos hexa
 
 Acontece que existem duas formas de armazenar isso na memória. 
 
-### Big Endian
+#### Big Endian
 
 Em big endian, você armazena o byte mais significativo no menor endereço. Veja como seria:
 
 Endereço | Valor 
-----------------
-1000	 | 90
-1001	 | AB 
+-------- |--------
+1000	   | 90
+1001	   | AB 
 1002     | 12
-1003	 | CD  
+1003	   | CD  
 
 
 
