@@ -62,7 +62,7 @@ disponível, você pode encontrar o web site do livro pela URL da Prentice Hall
 
 (www.prenhall.com). Pesquise por "Kip Irvine".
 
-1.1.1 Algumas boas questões 
+#### 1.1.1 Algumas boas questões 
 
 Talvez nós possamos responder algumas questões sobre este livro e como ele pode 
 
@@ -287,9 +287,9 @@ em relação a vários tipos de programas de computador.
 
 ...
 
------------- 			Capítulo 2			--------------
+## ------------ 			Capítulo 2			--------------
 
-2.1 Conceitos gerais
+#### 2.1 Conceitos gerais
 
 Este capítulo descreve a arquitetura da família de processadores Intel IA-32 e 
 
