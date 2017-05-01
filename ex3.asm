@@ -1,6 +1,6 @@
 ; Tópico 04 - Exercício 03
 
-INCLUDE ..\Irvine32.inc
+INCLUDE ..\Irvine32.inc			; biblioteca irvine
 
 .data
 
