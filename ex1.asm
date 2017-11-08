@@ -3,7 +3,7 @@ Include ..\Irvine32.inc
 
 .DATA
 
-var1 WORD 1000h	; inicializando 'variaveis'
+var1 WORD 1000h	; inicializando as 'variaveis'
 var2 WORD 2000h
 
 .CODE
